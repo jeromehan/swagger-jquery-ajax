@@ -1,0 +1,48 @@
+/* eslint-disable */
+/* eslint-disable */
+var Api={}
+var domain = ''
+var getDomain = () => {
+  return domain
+}
+Api.setDomain = ($domain) => {
+  domain = $domain
+}
+var request = (method, url, body, queryParameters, form, config)=>{
+  method = method.toLowerCase()
+  var keys = Object.keys(queryParameters)
+  var queryUrl = url+(keys.length > 0 ? '?' + (keys.map(key => key + '=' + encodeURIComponent(queryParameters[key])).join('&')) : '')
+  if(body){
+      return new Promise(function(resolve, reject){
+        $.ajax({
+            url: url,
+            type: method,
+            data: body,
+            success: function(data){
+                resolve(data);
+            },
+            error: function(error){
+                reject(error)
+            }
+        });
+    });
+  } else if (method === 'get') {
+      return new Promise(function(resolve, reject){
+        $.ajax({
+            url: queryUrl,
+            type: 'GET',
+            success: function(data){
+                resolve(data);
+            },
+            error: function(error){
+                reject(error)
+            }
+        });
+    });
+  }
+}
+
+{{> methods }}
+window.Api=Api
+
+

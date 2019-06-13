@@ -1,0 +1,39 @@
+{
+  "name": "swagger-jquery-ajax",
+  "version": "1.0.0",
+  "description": "this a swagger to jquery ajax tool",
+  "main": "main.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromehan/swagger-jquery-ajax.git"
+  },
+  "keywords": [
+    "swagger",
+    "jquery.ajax"
+  ],
+  "author": "jeromehan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeromehan/swagger-jquery-ajax/issues"
+  },
+  "homepage": "https://github.com/jeromehan/swagger-jquery-ajax#readme",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "js-beautify": "^1.6.12",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1"
+  }
+}
